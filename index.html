@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromoCat · Ofertas del día</title>
+<meta name="description" content="Las mejores ofertas del día de Mercado Libre Argentina.">
+<style>
+  :root { --yellow:#FFE600; --navy:#2D3277; --green:#00A650; --ink:#333; --grey:#777; --bg:#f5f5f5; --card:#fff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); }
+  header { background:var(--yellow); padding:24px 16px 20px; text-align:center; }
+  header h1 { margin:0; color:var(--navy); font-size:30px; font-weight:900; letter-spacing:-.5px; }
+  header p { margin:6px 0 0; color:var(--navy); font-size:15px; }
+  main { max-width:640px; margin:0 auto; padding:8px 16px 40px; }
+  h2 { font-size:18px; color:var(--navy); margin:28px 4px 12px; }
+  .deal { display:flex; gap:14px; align-items:center; background:var(--card); border-radius:16px; padding:12px; margin-bottom:10px;
+           text-decoration:none; color:inherit; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .deal:active { transform:scale(.99); }
+  .thumb { position:relative; flex:0 0 88px; height:88px; }
+  .thumb img { width:88px; height:88px; object-fit:contain; }
+  .num { position:absolute; top:-6px; left:-6px; background:var(--navy); color:#fff; font-weight:800; font-size:13px;
+          border-radius:999px; min-width:26px; height:26px; display:grid; place-items:center; padding:0 6px; }
+  .info { min-width:0; flex:1; }
+  .title { font-size:14px; line-height:1.3; margin:0 0 6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .before { font-size:12px; color:var(--grey); text-decoration:line-through; }
+  .price { font-size:20px; font-weight:800; color:var(--navy); }
+  .off { display:inline-block; background:var(--green); color:#fff; font-size:12px; font-weight:800; border-radius:6px; padding:2px 6px; margin-left:6px; vertical-align:3px; }
+  .cta { flex:0 0 auto; background:var(--yellow); color:var(--navy); font-weight:800; font-size:13px; border-radius:999px; padding:8px 12px; }
+  .coupon { display:flex; align-items:center; gap:12px; background:var(--card); border-radius:16px; padding:12px; margin-bottom:10px;
+             box-shadow:0 1px 3px rgba(0,0,0,.06); border-left:8px solid #2563EB; }
+  .coupon .code { font-family:ui-monospace,Menlo,monospace; font-weight:800; font-size:18px; background:var(--yellow); color:var(--navy);
+                   border-radius:10px; padding:6px 10px; letter-spacing:.5px; }
+  .coupon .terms { flex:1; font-size:13px; line-height:1.35; min-width:0; }
+  .coupon .terms b { color:#2563EB; font-size:16px; }
+  .coupon button { border:0; background:var(--navy); color:#fff; font-weight:800; font-size:13px; border-radius:999px; padding:8px 12px; cursor:pointer; }
+  .note { font-size:12px; color:var(--grey); margin:-4px 4px 8px; }
+  footer { text-align:center; font-size:12px; color:var(--grey); padding:0 16px 32px; max-width:640px; margin:0 auto; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#121212; --card:#1e1e1e; --ink:#eee; --grey:#999; }
+    h2 { color:var(--yellow); }
+    .price { color:#fff; }
+  }
+</style>
+</head>
+<body>
+<header><h1>PromoCat</h1><p>Ofertas del día de Mercado Libre · @promocat.ar</p></header>
+<main>
+<section id="cupones"><h2>🎟️ Cupones de hoy</h2><p class="note">Ingresá el código al pagar en Mercado Libre. Sujetos a disponibilidad.</p>
+<div class="coupon"><span class="code">MELIVIP5000</span><div class="terms"><b>$5.000 OFF</b><br>Compra mínima $30.000</div><button type="button" data-code="MELIVIP5000">Copiar</button></div>
+<div class="coupon"><span class="code">MAMAFEST</span><div class="terms"><b>$8.000 OFF</b><br>Compra mínima $80.000</div><button type="button" data-code="MAMAFEST">Copiar</button></div>
+<div class="coupon"><span class="code">MAMATEAMA</span><div class="terms"><b>$15.000 OFF</b><br>Compra mínima $150.000</div><button type="button" data-code="MAMATEAMA">Copiar</button></div>
+<div class="coupon"><span class="code">MAMAREGALO</span><div class="terms"><b>$25.000 OFF</b><br>Compra mínima $250.000</div><button type="button" data-code="MAMAREGALO">Copiar</button></div></section>
+<section id="2026-10-17"><h2>Hoy · Sábado 17 de octubre</h2>
+</section>
+<section id="2026-10-16"><h2>Viernes 16 de octubre</h2>
+</section>
+<section id="2026-10-15"><h2>Jueves 15 de octubre</h2>
+</section>
+<section id="2026-10-14"><h2>Miércoles 14 de octubre</h2>
+</section>
+<section id="2026-10-13"><h2>Martes 13 de octubre</h2>
+</section>
+<section id="2026-10-12"><h2>Lunes 12 de octubre</h2>
+</section>
+<section id="2026-10-11"><h2>Domingo 11 de octubre</h2>
+</section>
+</main>
+<footer>Precios y stock pueden cambiar en cualquier momento.</footer>
+<script>
+document.querySelectorAll(".coupon button").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var code = btn.getAttribute("data-code");
+    var done = function () { btn.textContent = "¡Copiado!"; setTimeout(function () { btn.textContent = "Copiar"; }, 1500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, function () { prompt("Copiá el código:", code); });
+    else prompt("Copiá el código:", code);
+  });
+});
+</script>
+</body>
+</html>
